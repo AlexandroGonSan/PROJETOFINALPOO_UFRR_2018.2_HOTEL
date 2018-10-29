@@ -23,6 +23,7 @@ import javax.swing.DropMode;
 import javax.swing.SwingConstants;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.LayoutStyle.ComponentPlacement;
 
 public class TelaLogin {
 
@@ -65,7 +66,7 @@ public class TelaLogin {
 		frmSistemaHotelSorriso.setTitle("SISTEMA HOTEL SORRISO");
 		frmSistemaHotelSorriso.setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\MobileAPP\\Desktop\\WhatsApp Image 2018-09-14 at 21.21.29.jpeg"));
 		frmSistemaHotelSorriso.getContentPane().setBackground(Color.DARK_GRAY);
-		frmSistemaHotelSorriso.setBounds(100, 100, 821, 682);
+		frmSistemaHotelSorriso.setBounds(100, 100, 910, 730);
 		frmSistemaHotelSorriso.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		JLabel lblHotelSorriso = new JLabel("HOTEL SORRISO");
@@ -92,6 +93,7 @@ public class TelaLogin {
 		passwordField.setFont(new Font("Arial", Font.PLAIN, 16));
 		
 		JButton btnEntrar = new JButton("ENTRAR");
+		/*
 		for(i=0;i<si.recepcionista.size();i++)
 		{
 			if(lblLogin.equals(si.recepcionista.get(i).getIdentificador()) && lblSenha.equals(si.recepcionista.get(i).getSenhaDeAcesso()))
@@ -102,49 +104,53 @@ public class TelaLogin {
 				});
 			}
 		}
-		
+		*/
+		btnEntrar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			}
+		});
 		GroupLayout groupLayout = new GroupLayout(frmSistemaHotelSorriso.getContentPane());
 		groupLayout.setHorizontalGroup(
-			groupLayout.createParallelGroup(Alignment.LEADING)
-				.addGroup(Alignment.TRAILING, groupLayout.createSequentialGroup()
-					.addContainerGap(92, Short.MAX_VALUE)
+			groupLayout.createParallelGroup(Alignment.TRAILING)
+				.addGroup(groupLayout.createSequentialGroup()
+					.addContainerGap(150, Short.MAX_VALUE)
 					.addComponent(lblHotelSorriso, GroupLayout.PREFERRED_SIZE, 625, GroupLayout.PREFERRED_SIZE)
-					.addGap(86))
+					.addGap(117))
 				.addGroup(groupLayout.createSequentialGroup()
-					.addGap(342)
-					.addComponent(lblLogin)
-					.addContainerGap(426, Short.MAX_VALUE))
-				.addGroup(groupLayout.createSequentialGroup()
-					.addGap(336)
+					.addContainerGap(380, Short.MAX_VALUE)
 					.addComponent(lblSenha)
-					.addContainerGap(416, Short.MAX_VALUE))
+					.addGap(373))
 				.addGroup(groupLayout.createSequentialGroup()
-					.addGap(307)
-					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING, false)
-						.addComponent(passwordField, Alignment.TRAILING)
-						.addComponent(txtAdasd, Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, 189, Short.MAX_VALUE))
-					.addContainerGap(395, Short.MAX_VALUE))
+					.addContainerGap(387, Short.MAX_VALUE)
+					.addComponent(lblLogin)
+					.addGap(382))
 				.addGroup(groupLayout.createSequentialGroup()
-					.addGap(367)
-					.addComponent(btnEntrar)
-					.addContainerGap(445, Short.MAX_VALUE))
+					.addGap(354)
+					.addGroup(groupLayout.createParallelGroup(Alignment.TRAILING)
+						.addComponent(passwordField, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, 189, Short.MAX_VALUE)
+						.addComponent(txtAdasd, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, 189, Short.MAX_VALUE))
+					.addGap(349))
+				.addGroup(groupLayout.createSequentialGroup()
+					.addContainerGap(392, Short.MAX_VALUE)
+					.addComponent(btnEntrar, GroupLayout.PREFERRED_SIZE, 116, GroupLayout.PREFERRED_SIZE)
+					.addGap(384))
 		);
 		groupLayout.setVerticalGroup(
 			groupLayout.createParallelGroup(Alignment.LEADING)
 				.addGroup(groupLayout.createSequentialGroup()
 					.addContainerGap()
 					.addComponent(lblHotelSorriso, GroupLayout.PREFERRED_SIZE, 182, GroupLayout.PREFERRED_SIZE)
-					.addGap(18)
+					.addPreferredGap(ComponentPlacement.RELATED)
 					.addComponent(lblLogin)
 					.addGap(18)
 					.addComponent(txtAdasd, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-					.addGap(18)
+					.addGap(73)
 					.addComponent(lblSenha, GroupLayout.PREFERRED_SIZE, 47, GroupLayout.PREFERRED_SIZE)
 					.addGap(18)
 					.addComponent(passwordField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-					.addGap(88)
-					.addComponent(btnEntrar)
-					.addContainerGap(117, Short.MAX_VALUE))
+					.addGap(82)
+					.addComponent(btnEntrar, GroupLayout.PREFERRED_SIZE, 45, GroupLayout.PREFERRED_SIZE)
+					.addContainerGap(101, Short.MAX_VALUE))
 		);
 		frmSistemaHotelSorriso.getContentPane().setLayout(groupLayout);
 		frmSistemaHotelSorriso.setFocusTraversalPolicy(new FocusTraversalOnArray(new Component[]{frmSistemaHotelSorriso.getContentPane(), lblHotelSorriso, lblLogin, lblSenha, passwordField, txtAdasd, btnEntrar}));

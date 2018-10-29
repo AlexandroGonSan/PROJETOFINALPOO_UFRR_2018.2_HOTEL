@@ -3,10 +3,12 @@ package telas;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
+import java.awt.Toolkit;
+import java.awt.Color;
 
 public class TelaPrincipal {
 
-	private JFrame frame;
+	private JFrame frmSistemaHotelSorriso;
 
 	/**
 	 * Launch the application.
@@ -16,7 +18,7 @@ public class TelaPrincipal {
 			public void run() {
 				try {
 					TelaPrincipal window = new TelaPrincipal();
-					window.frame.setVisible(true);
+					window.frmSistemaHotelSorriso.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -35,9 +37,12 @@ public class TelaPrincipal {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		frame = new JFrame();
-		frame.setBounds(100, 100, 450, 300);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frmSistemaHotelSorriso = new JFrame();
+		frmSistemaHotelSorriso.getContentPane().setBackground(Color.DARK_GRAY);
+		frmSistemaHotelSorriso.setTitle("SISTEMA HOTEL SORRISO");
+		frmSistemaHotelSorriso.setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\MobileAPP\\Desktop\\WhatsApp Image 2018-09-14 at 21.21.29.jpeg"));
+		frmSistemaHotelSorriso.setBounds(100, 100, 910, 730);
+		frmSistemaHotelSorriso.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 
 }
