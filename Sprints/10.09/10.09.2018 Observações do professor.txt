@@ -1,0 +1,5 @@
+Melhorar os diagramas de classes e de ação
+Especificar o que o sistema vai realizar(Generalizado ou espeficado)
+Levantamento de requisitos
+classe quarto: Tipo de quarto, preço do quarto, etc.
+classe pessoa
